@@ -1,0 +1,1162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>72</x>
+      <y>90</y>
+      <w>1272</w>
+      <h>1128</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.mannschaftssport.verwaltung</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>84</x>
+      <y>114</y>
+      <w>1248</w>
+      <h>420</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.mocktail.verwalten.boundary</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>84</x>
+      <y>546</y>
+      <w>1248</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.mannschaftssport.verwaltung.control</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>84</x>
+      <y>774</y>
+      <w>1248</w>
+      <h>282</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.mannschaftssport.verwaltung.entity</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>84</x>
+      <y>1068</y>
+      <w>1248</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.mannschaftssport.verwaltung.gateway</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>606</x>
+      <y>576</y>
+      <w>180</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Interface &gt;&gt;
+ManageManagers
+--
++selectManager(id: Long):Manager
++selectAllManagers(): List&lt;Manager&gt;
++createManager(manager: Manager):Manager
++modifyManager(manager: Manager):Manager
++deleteManager(id: Long)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>654</x>
+      <y>666</y>
+      <w>78</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>VerwalterIn</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>690</x>
+      <y>648</y>
+      <w>18</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>720</y>
+      <w>138</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Service &gt;&gt;
+TeamService</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>798</x>
+      <y>720</y>
+      <w>138</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Service &gt;&gt;
+ManagerService</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>726</x>
+      <y>684</y>
+      <w>84</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>120.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>606</x>
+      <y>804</y>
+      <w>192</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Interface &gt;&gt;
+TeamKatalog
+--
++selectAllTeams(name: String, categories: List&lt;String&gt;):List&lt;Team&gt;
++selectAllTeams():List&lt;Team&gt;
++selectAllTeams(name: String):List&lt;Team&gt;
++selectAllTeams(categories: List&lt;String&gt;):List&lt;Team&gt;
++selectTeam(id: Long): Team
++createTeam(team: Team):Team
++modifyTeam(team: Team):Team
++addPlayersToTeam(teamId: Long, players List&lt;Player&gt;)
++modifyPlayersFromTeam(teamId: Long, players List&lt;Player&gt;)
++deleteTeam(id: Long)
++deletePlayersFromTeam(teamId: Long, players List&lt;Player&gt;)
++listPlayersOfTeam(teamId: Long):List&lt;Player&gt;
++getManagerOfTeam(teamId: Long): Manager
++setManagerOfTeam(teamId: Long, manager: Manager)
++deleteManagerOfTeam(teamId: Long)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>984</y>
+      <w>108</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Player
+--
+-id: Long
+-name: string
+-condition: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>720</y>
+      <w>138</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Service &gt;&gt;
+PlayerService</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>678</x>
+      <y>1128</y>
+      <w>78</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Repository &gt;&gt;
+TeamRepository
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>1038</y>
+      <w>18</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>846</x>
+      <y>738</y>
+      <w>18</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>588</x>
+      <y>138</y>
+      <w>516</w>
+      <h>378</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.mannschaftssport.verwaltung.boundary.dto</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>378</x>
+      <y>138</y>
+      <w>198</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>/teams/{teamid}
+--
+GET - show detail team
+PUT - modify team
+POST - unused
+DELETE - delete team
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>96</x>
+      <y>138</y>
+      <w>198</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>/teams
+--
+GET - list all teams
+PUT - unused
+POST - new team
+DELETE - unused
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>282</x>
+      <y>318</y>
+      <w>108</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>TeamResource
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>492</y>
+      <w>660</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>1080.0;130.0;1080.0;80.0;10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>276</x>
+      <y>198</y>
+      <w>18</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>198</y>
+      <w>18</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>612</x>
+      <y>162</y>
+      <w>120</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>/AttributeDTO/
+--
+_+getAttributesOfTeam(): AttributeDTO_
+_+getAttributesOfManager: AttributeDTO_
+_+getAttributesOfPlayer: AttributeDTO_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>402</x>
+      <y>240</y>
+      <w>174</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>/teams/{teamid}/relationships/manager
+--
+GET - manager of the team
+PUT - modify manager
+POST - unused
+DELETE - delete manager
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>96</x>
+      <y>240</y>
+      <w>168</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>/teams/{teamid}/relationships/players
+--
+GET - list of players in the team
+PUT - modify players
+POST - add players
+DELETE - delete players
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>162</x>
+      <y>300</y>
+      <w>132</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;200.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>300</y>
+      <w>114</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>170.0;10.0;170.0;50.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>96</x>
+      <y>450</y>
+      <w>168</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>/players
+--
+GET - list of all players
+PUT - unused
+POST - add player
+DELETE - unused
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>96</x>
+      <y>354</y>
+      <w>168</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>/managers
+--
+GET - list of all managers
+PUT - unused
+POST - add manager
+DELETE - unused
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>450</y>
+      <w>168</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>/players/{playerid}
+--
+GET - specific player
+PUT - modify player
+POST - unused
+DELETE - delete player
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>354</y>
+      <w>168</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>/managers/{managerid}
+--
+GET - list specific manager
+PUT - modify manager
+POST - unused
+DELETE - delete manager
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>282</x>
+      <y>372</y>
+      <w>108</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>ManagerResource
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>282</x>
+      <y>474</y>
+      <w>108</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>PlayerResource
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>204</x>
+      <y>570</y>
+      <w>234</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Interface &gt;&gt;
+ManageTeams
+--
++selectAllTeams(name: String, categories: List&lt;String&gt;):List&lt;Team&gt;
++selectAllTeams():List&lt;Team&gt;
++selectAllTeams(name: String):List&lt;Team&gt;
++selectAllTeams(categories: List&lt;String&gt;):List&lt;Team&gt;
++selectTeam(id: Long): Team
++createTeam(team: Team):Team
++modifyTeam(team: Team):Team
++addPlayersToTeam(teamId: Long, players List&lt;Player&gt;)
++modifyPlayersFromTeam(teamId: Long, players List&lt;Player&gt;)
++deleteTeam(id: Long)
++deletePlayersFromTeam(teamId: Long, players List&lt;Player&gt;)
++listPlayerIOfTeam(teamId: Long):List&lt;Player&gt;
++getManagerOfTeam(teamId: Long): Manager
++setManagerOfTeam(teamId: Long, manager: Manager)
++deleteManagerOfTeam(teamId: Long)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>894</x>
+      <y>570</y>
+      <w>180</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Interface &gt;&gt;
+ManagePlayers
+--
++selectPlayer(id: Long):Player
++selectAllPlayers(): List&lt;Player&gt;
++createPlayer(player: Player):Player
++modifyPlayer(player: Player):Player
++deletePlayer(id: Long)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>432</x>
+      <y>672</y>
+      <w>234</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;370.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>726</x>
+      <y>648</y>
+      <w>258</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>410.0;10.0;410.0;50.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>258</x>
+      <y>378</y>
+      <w>36</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>258</x>
+      <y>480</y>
+      <w>36</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>378</y>
+      <w>36</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>480</y>
+      <w>36</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>816</y>
+      <w>174</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Interface &gt;&gt;
+PlayerKatalog
+--
++selectPlayer(id: Long):Player
++selectAllPlayers(): List&lt;Player&gt;
++createPlayer(player: Player):Player
++modifyPlayer(player: Player):Player
++deletePlayer(id: Long)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>834</x>
+      <y>810</y>
+      <w>174</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Interface &gt;&gt;
+ManagerKatalog
+--
++selectManager(id: Long):Manager
++selectAllManagers(): List&lt;Manager&gt;
++createManager(manager: Manager):Manager
++modifyManager(manager: Manager):Manager
++deleteManager(id: Long)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>582</x>
+      <y>684</y>
+      <w>84</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>690</x>
+      <y>684</y>
+      <w>18</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>690</x>
+      <y>738</y>
+      <w>18</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>546</x>
+      <y>738</y>
+      <w>18</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>690</x>
+      <y>738</y>
+      <w>156</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>240.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>564</x>
+      <y>738</y>
+      <w>144</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;130.0;220.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>882</x>
+      <y>984</y>
+      <w>108</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Manager
+--
+-id: Long
+-name: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>918</x>
+      <y>1038</y>
+      <w>18</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>978</y>
+      <w>108</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Team
+--
+-id: Long
+-name: string
+-category: string
+-players: List&lt;Player&gt;
+-manager: Manager</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>708</x>
+      <y>1044</y>
+      <w>18</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>900</y>
+      <w>84</w>
+      <h>258</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;410.0;120.0;410.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>468</x>
+      <y>1128</y>
+      <w>78</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Repository &gt;&gt;
+PlayerRepository
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>876</x>
+      <y>1128</y>
+      <w>78</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Repository &gt;&gt;
+ManagerRepository
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>948</x>
+      <y>894</y>
+      <w>72</w>
+      <h>258</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>100.0;10.0;100.0;410.0;10.0;410.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>918</y>
+      <w>90</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>80.0;10.0;130.0;10.0;130.0;370.0;10.0;370.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1110</x>
+      <y>138</y>
+      <w>210</w>
+      <h>378</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.mannschaftssport.verwaltung.boundary.deserialize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1164</x>
+      <y>162</y>
+      <w>120</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>EntityDeserializer
+--
++dezerialize(JsonParser, DeserializationContext, Type): EntityDTO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1164</x>
+      <y>246</y>
+      <w>120</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>DataDeserializer
+--
++dezerialize(JsonParser, DeserializationContext, Type): DataDTO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>954</x>
+      <y>252</y>
+      <w>126</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>/DataDTO/
+--
+/+dataAsList(): List&lt;EntityDTO&gt;/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1074</x>
+      <y>270</y>
+      <w>102</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>954</x>
+      <y>156</y>
+      <w>126</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>EntityDTO
+--
+-id: String
+-type: String
+-
+(getters and setters)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1074</x>
+      <y>180</y>
+      <w>102</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>786</x>
+      <y>324</y>
+      <w>120</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>/LinkDTO/
+--
+/+getSelfLinkDTO(): LinkDTO/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>786</x>
+      <y>228</y>
+      <w>120</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>FullEntityDTO
+--
+(getters and setters)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>726</x>
+      <y>168</y>
+      <w>108</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0;160.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>276</y>
+      <w>18</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>858</x>
+      <y>162</y>
+      <w>108</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+extends</panel_attributes>
+    <additional_attributes>160.0;20.0;10.0;20.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>786</x>
+      <y>438</y>
+      <w>120</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>/SelfLinkDTO/
+--
+-self: String
+-
++getSelf(): String
++setSelf(String self)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>372</y>
+      <w>48</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+extends</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>954</x>
+      <y>438</y>
+      <w>126</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>ListDataDTO
+--
+(getters and setters)
++dataAsList(): List&lt;EntityDTO&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>918</x>
+      <y>180</y>
+      <w>48</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=n
+-data</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0;10.0;480.0;60.0;480.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1074</x>
+      <y>294</y>
+      <w>30</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;30.0;10.0;30.0;260.0;10.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>612</x>
+      <y>252</y>
+      <w>120</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>ManagerAttributeDTO
+--
+-name: String
+-
+(getters and setters)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>612</x>
+      <y>348</y>
+      <w>120</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>/PlayerAttributeDTO/
+--
+-name: String
+-condition: String
+-
+(getters and setters)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>612</x>
+      <y>438</y>
+      <w>120</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>/TeamAttributeDTO/
+--
+-name: String
+-category: String
+-
+(getters and setters)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>726</x>
+      <y>192</y>
+      <w>36</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0;40.0;140.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>726</x>
+      <y>186</y>
+      <w>48</w>
+      <h>204</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0;60.0;320.0;10.0;320.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>726</x>
+      <y>180</y>
+      <w>60</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;480.0;10.0;480.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>954</x>
+      <y>348</y>
+      <w>126</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>SingletDataDTO
+--
++setData(List&lt;EntityDTO&gt; data)
++dataAsList(): List&lt;EntityDTO&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1008</x>
+      <y>300</y>
+      <w>18</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>390</y>
+      <w>450</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>730.0;310.0;730.0;270.0;10.0;270.0;10.0;10.0;30.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>336</y>
+      <w>24</w>
+      <h>246</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>20.0;390.0;20.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

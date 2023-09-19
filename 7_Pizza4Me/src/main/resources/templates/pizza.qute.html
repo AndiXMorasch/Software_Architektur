@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pizza {pizza.name}</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <script>
+      // Wie kann man das hier am besten mit dem reload / refresh der Seite lösen?
+      async function modifyPizza(pizzaId) {
+        name = document.getElementById("changedPizzaName").value;
+        price = document.getElementById("changedPizzaPrice").value;
+
+        dataToSend = JSON.stringify({ name: name, price: price, id: pizzaId });
+
+        const response = await fetch(
+          "http://localhost:8080/pizzas/" + pizzaId,
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: dataToSend,
+          }
+        );
+
+        response.json();
+      }
+
+      // Wie kann man das hier am besten mit dem reload / refresh der Seite lösen?
+      async function addIngredient(pizzaId) {
+        ingredientName = document.getElementById("ingredientName").value;
+
+        dataToSend = JSON.stringify({ name: ingredientName });
+
+        const response = await fetch(
+          "http://localhost:8080/pizzas/" + pizzaId,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: dataToSend,
+          }
+        );
+
+        response.json();
+      }
+    </script>
+
+    <h2>Modify Pizza</h2>
+
+    <form style="margin-bottom: 50px">
+      <div class="row">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            id="changedPizzaName"
+            placeholder="Pizzaname"
+            value="{pizza.name}"
+            required
+          />
+        </div>
+        <div class="col">
+          <input
+            type="number"
+            step="0.01"
+            class="form-control"
+            id="changedPizzaPrice"
+            placeholder="Price"
+            value="{pizza.price}"
+            required
+          />
+        </div>
+        <div class="col">
+          <input
+            class="btn btn-primary"
+            type="button"
+            onclick="modifyPizza('{pizza.id}')"
+            value="Change"
+          />
+        </div>
+      </div>
+    </form>
+
+    <h2>Add Ingredient</h2>
+
+    <form style="margin-bottom: 50px">
+      <div class="row">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            id="ingredientName"
+            placeholder="Ingredientname"
+            required
+          />
+        </div>
+        <div class="col">
+          <input
+            class="btn btn-primary"
+            type="button"
+            onclick="addIngredient('{pizza.id}')"
+            value="Add Ingredient"
+          />
+        </div>
+      </div>
+    </form>
+
+    <h2>Ingredients Overview</h2>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Ingredient-ID</th>
+          <th scope="col">Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        {#for ingredient in pizza.ingredients}
+        <tr>
+          <th scope="row">{ingredient.id}</th>
+          <td>{ingredient.name ?: 'Unknown'}</td>
+        </tr>
+        {/for}
+      </tbody>
+    </table>
+  </body>
+</html>

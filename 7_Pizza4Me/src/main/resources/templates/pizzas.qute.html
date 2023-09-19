@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Pizzas Overview</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <script>
+        function openPizzaDetails(pizzaId) {
+            window.location.assign('http://localhost:8080/pizza-details?id=' + pizzaId);
+        }
+
+        // Ich bekomme forbidden zurück - später nochmal mit admin testen, sollte aber funktionieren
+        // Wie kann man das hier am besten mit dem reload / refresh der Seite lösen?
+        async function createNewPizza(pizzaId) {
+            name = document.getElementById('validationPizzaName').value;
+            price = document.getElementById('validationPizzaPrice').value;
+
+            dataToSend = JSON.stringify({ "name": name, "price": price });
+
+            const response = await fetch("http://localhost:8080/pizzas", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: dataToSend
+            });
+
+            response.json();
+        }
+
+        // Ich bekomme forbidden zurück - später nochmal mit admin testen, sollte aber funktionieren
+        // Wie kann man das hier am besten mit dem reload / refresh der Seite lösen?
+        async function deletePizzaEntry(pizzaId) {
+            await fetch('http://localhost:8080/pizzas/' + pizzaId, {
+                method: 'DELETE',
+                headers: {
+                    'Content-type': 'application/json'
+                }
+            });
+        }
+    </script>
+
+    <h2>Create Pizza</h2>
+
+    <form style="margin-bottom: 50px;">
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" id="validationPizzaName" placeholder="Pizzaname" required>
+            </div>
+            <div class="col">
+                <input type="number" step="0.01" class="form-control" id="validationPizzaPrice" placeholder="Price"
+                    required>
+            </div>
+            <div class="col">
+                <input class="btn btn-primary" type="button" onclick="createNewPizza()" value="Create">
+            </div>
+        </div>
+    </form>
+
+    <h2>Pizzas Overview</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Pizza-ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Modify</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {#for pizza in pizzas}
+            <tr>
+                <th scope="row">{pizza.id}</th>
+                <td>{pizza.name ?: 'Unknown'}</td>
+                <td>{pizza.price ?: 'Unknown'}</td>
+                <td><input class="btn btn-primary" type="button" onclick="openPizzaDetails('{pizza.id}')" value="Edit">
+                </td>
+                <td><button type="button" onclick="deletePizzaEntry('{pizza.id}')"
+                        class="btn btn-outline-danger">Delete</button></td>
+            </tr>
+            {/for}
+        </tbody>
+    </table>
+
+</body>
+
+</html>

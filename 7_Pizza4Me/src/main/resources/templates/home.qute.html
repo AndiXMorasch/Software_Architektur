@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello {name ?: "Qute"}</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        h1 {
+            color: #4695EB;
+            font-size: 6vw;
+        }
+
+        h1 b {
+            color: #be9100;
+        }
+
+        p {
+            font-size: 2vw;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        async function log() {
+            console.log("Gehe rein");
+            console.log(document.getElementById('textinput').value);
+
+            const response = await fetch('http://localhost:8080/pizzas');
+            const myJson = await response.json();
+            console.log(myJson);
+        }
+    </script>
+
+    <h1>Hello <b>{name ?: "Qute"}</b></h1>
+
+    <p>Create your web page using Quarkus RESTEasy & Qute</p>
+
+    <input type="text" id="textinput" name="name" required minlength="4" maxlength="8" size="10">
+    <button type="button" onclick="log()">Click Me!</button>
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+2023-05-06 20:14:30,509 andreascomputer code-with-quarkus-dev.jar[28792] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.log.file.rotaion.file-suffix" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2023-05-06 20:14:42,636 andreascomputer code-with-quarkus-dev.jar[28792] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2023-05-06 20:14:42,638 andreascomputer code-with-quarkus-dev.jar[28792] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) relation "zutatentity" does not exist, skipping
+2023-05-06 20:14:42,640 andreascomputer code-with-quarkus-dev.jar[28792] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2023-05-06 20:14:42,641 andreascomputer code-with-quarkus-dev.jar[28792] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) table "mocktailentity" does not exist, skipping
+2023-05-06 20:14:42,643 andreascomputer code-with-quarkus-dev.jar[28792] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2023-05-06 20:14:42,644 andreascomputer code-with-quarkus-dev.jar[28792] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) table "zutatentity" does not exist, skipping
+2023-05-06 20:14:42,645 andreascomputer code-with-quarkus-dev.jar[28792] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2023-05-06 20:14:42,646 andreascomputer code-with-quarkus-dev.jar[28792] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) sequence "mocktail_id_seq" does not exist, skipping
+2023-05-06 20:14:42,647 andreascomputer code-with-quarkus-dev.jar[28792] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2023-05-06 20:14:42,647 andreascomputer code-with-quarkus-dev.jar[28792] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) sequence "zutat_id_seq" does not exist, skipping
+2023-05-06 20:15:56,164 andreascomputer code-with-quarkus-dev.jar[28792] INFO  [de.hso.swa.moc.ver.bou.res.MocktailRessource] (executor-thread-0) Get cocktail by name 'margarita'
+2023-05-06 20:15:56,836 andreascomputer code-with-quarkus-dev.jar[28792] INFO  [de.hso.swa.moc.ver.bou.res.MocktailRessource] (executor-thread-0) Get cocktail by name 'margarita'
+2023-05-06 20:15:56,901 andreascomputer code-with-quarkus-dev.jar[28792] TRACE [de.hso.swa.moc.ver.bou.res.MocktailRessource] (executor-thread-0) [de.hsos.swa.mocktail.verwalten.entity.Cocktail@4e52ea90, de.hsos.swa.mocktail.verwalten.entity.Cocktail@789a6fa8, de.hsos.swa.mocktail.verwalten.entity.Cocktail@62696be1, de.hsos.swa.mocktail.verwalten.entity.Cocktail@9d2c35b, de.hsos.swa.mocktail.verwalten.entity.Cocktail@7d954598, de.hsos.swa.mocktail.verwalten.entity.Cocktail@5185201a]
+2023-05-06 20:16:03,441 andreascomputer code-with-quarkus-dev.jar[28792] INFO  [de.hso.swa.moc.ver.bou.res.MocktailRessource] (executor-thread-0) Get all
+2023-05-06 20:16:03,605 andreascomputer code-with-quarkus-dev.jar[28792] TRACE [de.hso.swa.moc.ver.bou.res.MocktailRessource] (executor-thread-0) Mapping Mocktail-List to DTO
+2023-05-06 20:16:03,605 andreascomputer code-with-quarkus-dev.jar[28792] INFO  [de.hso.swa.moc.ver.bou.res.MocktailRessource] (executor-thread-0) []

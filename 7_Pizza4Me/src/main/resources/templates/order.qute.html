@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Order {order.id}</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <script>
+      async function addPosition(orderId) {
+        let amount = document.getElementById("amount").value;
+        let pizzaSelect = document.getElementById("pizza");
+        let pizzaId = pizzaSelect.options[pizzaSelect.selectedIndex].value;
+        let sizeSelect = document.getElementById("size");
+        let size = sizeSelect.options[sizeSelect.selectedIndex].value;
+
+        if (pizza == "" || !size || amount < 1) {
+          console.error("eingabe falsch");
+          return;
+        }
+
+        dataToSend = JSON.stringify({
+          pizzaId: pizzaId,
+          size: size,
+          quantity: amount,
+        });
+
+        const response = await fetch(
+          "http://localhost:8080/orders/" + orderId,
+          {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: dataToSend,
+          }
+        );
+
+        response.json();
+        location.reload();
+      }
+
+      async function sendOrder(orderId) {
+        const response = await fetch(
+          "http://localhost:8080/orders/" + orderId,
+          {
+            method: "PUT",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+          }
+        );
+
+        response.json();
+        location.reload();
+      }
+    </script>
+
+    <h2>Add Position</h2>
+
+    <form style="margin-bottom: 50px">
+      <div class="row">
+        <div class="col">
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            id="pizza"
+          >
+            <option selected>Select Pizza</option>
+            {#for pizza in pizzas}
+            <option value="{pizza.id}">{pizza.name}</option>
+            {/for}
+          </select>
+        </div>
+        <div class="col">
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            id="size"
+          >
+            <option selected>Select Size</option>
+            <option value="S">small</option>
+            <option value="M">medium</option>
+            <option value="L">large</option>
+          </select>
+        </div>
+        <div class="col">
+          <input
+            type="number"
+            step="1"
+            class="form-control"
+            id="amount"
+            placeholder="Amount"
+            value="1"
+            required
+          />
+        </div>
+        <div class="col">
+          <input
+            class="btn btn-primary"
+            type="button"
+            onclick="addPosition('{order.id}')"
+            value="Add"
+          />
+        </div>
+      </div>
+    </form>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Pizza</th>
+          <th scope="col">Price</th>
+          <th scope="col">Size</th>
+          <th scope="col">Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        {#for position in order.orderPositions}
+        <tr>
+          <th scope="row">{position.name}</th>
+          <td>{position.price ?: 'Unknown'}</td>
+          <td>{position.size ?: 'Unknown'}</td>
+          <td>{position.quantity ?: 'Unknown'}</td>
+        </tr>
+        {/for}
+      </tbody>
+    </table>
+
+    <div class="col">
+      <input
+        class="btn btn-primary"
+        type="button"
+        onclick="sendOrder('{order.id}')"
+        value="Send"
+      />
+    </div>
+  </body>
+</html>
