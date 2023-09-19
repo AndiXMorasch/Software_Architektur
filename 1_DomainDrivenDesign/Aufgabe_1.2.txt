@@ -1,0 +1,16 @@
+Gut umgesetzt: 
+
+- Infrastruktur (Datenspeicherung / Repository) greift auf Domäne zu, nicht umgekehrt.
+- Aggregate teils umgesetzt
+
+Schlecht umgesetzt:
+
+- Wieso gehen in dem view package alle Pfeile von SuchenStartView aus? 
+Wäre es nicht besser dafür eine zentrale Stelle zu schaffen? Ebenso wäre
+hier eine Unterteilung in jeweilige packages sinnvoll (suchenStart, 
+
+- Ware und Produktinformation ist nicht optimal gelöst. Muss es eine Produktinformation
+überhaupt zwingend geben?
+
+- Bei der View müssen die Controls mit den Views getauscht werden.
+- WareSuchenUndPrüfen in zwei Services aufteilen

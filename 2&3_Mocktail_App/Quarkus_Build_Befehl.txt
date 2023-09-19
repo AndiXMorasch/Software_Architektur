@@ -1,0 +1,5 @@
+mvnw compile quarkus:dev
+
+alternativ auch:
+
+mvnw clean compile quarkus:dev

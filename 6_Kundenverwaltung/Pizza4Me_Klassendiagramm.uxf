@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>912</x>
+      <y>168</y>
+      <w>736</w>
+      <h>1128</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.pizza4me.bestellverwaltung</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>928</x>
+      <y>200</y>
+      <w>704</w>
+      <h>296</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.pizza4me.bestellverwaltung.boundary</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>928</x>
+      <y>504</y>
+      <w>704</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.pizza4me.bestellverwaltung.control</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>928</x>
+      <y>800</y>
+      <w>704</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.pizza4me.bestellverwaltung.entity</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1184</x>
+      <y>536</y>
+      <w>240</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Interface &gt;&gt;
+ManageOrders
+--
++selectAllOrders():List&lt;Order&gt;
++selectOrder(orderId: Long):Order
++createOrder(order: Order):Long
++modifyOrder(order: Order):Order
++deleteOrder(orderId: Long): boolean
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1248</x>
+      <y>672</y>
+      <w>104</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>VerwalterIn</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1296</x>
+      <y>632</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1208</x>
+      <y>736</y>
+      <w>184</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Service &gt;&gt;
+OrderService</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1184</x>
+      <y>848</y>
+      <w>256</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Interface &gt;&gt;
+AuftragKatalog
+--
++selectAllOrders():List&lt;Order&gt;
++selectOrder(orderId: Long): Order
++createOrder(order: Order): Long
++modifyOrder(order: Order): Order
++deleteOrder(orderId: Long): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1264</x>
+      <y>1176</y>
+      <w>104</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Repository &gt;&gt;
+OrderRepository
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1368</x>
+      <y>368</y>
+      <w>144</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>/orders/{orderid}
+--
+GET - show detail order
+PUT - modify order
+POST - unused
+DELETE - delete order
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1120</x>
+      <y>368</y>
+      <w>136</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>/orders
+--
+GET - list all orders
+PUT - unused
+POST - new order
+DELETE - unused
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1248</x>
+      <y>296</y>
+      <w>144</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>OrderResource
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1184</x>
+      <y>296</y>
+      <w>80</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1384</x>
+      <y>296</y>
+      <w>88</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>90.0;90.0;90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1296</x>
+      <y>696</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1296</x>
+      <y>760</y>
+      <w>24</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1240</x>
+      <y>976</y>
+      <w>144</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Order
+--
+-id: Long
+-beschreibung: string
+-eingangsdatum: Date
+-schiffsUrl: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1304</x>
+      <y>1064</y>
+      <w>24</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1360</x>
+      <y>896</y>
+      <w>144</w>
+      <h>312</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>100.0;10.0;160.0;10.0;160.0;370.0;10.0;370.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>928</x>
+      <y>1096</y>
+      <w>704</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.pizza4me.bestellverwaltung.gateway</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1072</x>
+      <y>1144</y>
+      <w>144</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>OrderEntity
+--
+-id: Long
+-beschreibung: string
+-eingangsdatum: Date
+-schiffsUrl: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>2168</x>
+      <y>160</y>
+      <w>840</w>
+      <h>1096</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.pizza4me.pizzaverwaltung</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>2184</x>
+      <y>192</y>
+      <w>800</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.reederei.pizza4me.pizzaverwaltung.boundary</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>2184</x>
+      <y>464</y>
+      <w>800</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.pizza4me.pizzaverwaltung.control</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>2184</x>
+      <y>760</y>
+      <w>808</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.pizza4me.pizzaverwaltung.entity</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2496</x>
+      <y>496</y>
+      <w>240</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Interface &gt;&gt;
+ManageShips
+--
++selectAllShips():List&lt;Ship&gt;
++selectShip(shipId: Long): Ship
++createShip(ship: Ship): Long
++modifyShip(ship: Ship): Ship
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2560</x>
+      <y>632</y>
+      <w>104</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>VerwalterIn</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2608</x>
+      <y>592</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2520</x>
+      <y>696</y>
+      <w>184</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Service &gt;&gt;
+ShipService</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2496</x>
+      <y>808</y>
+      <w>256</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Interface &gt;&gt;
+ShipKatalog
+--
++selectAllShips():List&lt;Ship&gt;
++selectShip(shipId: Long): Ship
++createShip(ship: Ship): Long
++modifyShip(ship: Ship): Ship</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2576</x>
+      <y>1136</y>
+      <w>104</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Repository &gt;&gt;
+ShipRepository
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2664</x>
+      <y>320</y>
+      <w>144</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>/ships/{shipid}
+--
+GET - show detail ship
+PUT - modify ship
+POST - unused
+DELETE - unused
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2416</x>
+      <y>320</y>
+      <w>136</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>/ships
+--
+GET - list all ships
+PUT - unused
+POST - new ship
+DELETE - unused
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2544</x>
+      <y>248</y>
+      <w>144</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>ShipResource
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2480</x>
+      <y>248</y>
+      <w>80</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2680</x>
+      <y>248</y>
+      <w>88</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>90.0;90.0;90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2608</x>
+      <y>656</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2608</x>
+      <y>720</y>
+      <w>24</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2552</x>
+      <y>936</y>
+      <w>144</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Ship
+--
+-id: Long
+-name: string
+-auftragszustand: boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2616</x>
+      <y>1024</y>
+      <w>24</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2672</x>
+      <y>856</y>
+      <w>144</w>
+      <h>312</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>100.0;10.0;160.0;10.0;160.0;370.0;10.0;370.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>2184</x>
+      <y>1056</y>
+      <w>808</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.pizza4me.pizzaverwaltung.gateway</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2384</x>
+      <y>1104</y>
+      <w>144</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>ShipEntity
+--
+-id: Long
+-name: string
+-auftragszustand: boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>944</x>
+      <y>368</y>
+      <w>144</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>OrderDTO
+--
++id: Long
++beschreibung: string
++eingangsdatum: Date
++customerUrl: string
++pizzaUrl: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2216</x>
+      <y>320</y>
+      <w>144</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>ShipDTO
+--
++id: Long
++name: string
++auftragszustand: boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1696</x>
+      <y>464</y>
+      <w>432</w>
+      <h>624</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.reederei.shared.events</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1760</x>
+      <y>552</y>
+      <w>144</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>NewOrderEvent
+--
++orderId: Long</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1840</x>
+      <y>680</y>
+      <w>144</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>OrderDeletedEvent
+--
++shipId: Long</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1384</x>
+      <y>744</y>
+      <w>328</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>390.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1848</x>
+      <y>920</y>
+      <w>144</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>OrderAcceptedEvent
+--
++orderId: Long
++shipId: Long</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2120</x>
+      <y>704</y>
+      <w>416</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;500.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1936</x>
+      <y>552</y>
+      <w>144</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>OrderChangedEvent
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2608</x>
+      <y>272</y>
+      <w>24</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;280.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1304</x>
+      <y>320</y>
+      <w>24</w>
+      <h>232</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;270.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>120</x>
+      <y>168</y>
+      <w>736</w>
+      <h>1128</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.pizza4me.kundenverwaltung</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>136</x>
+      <y>200</y>
+      <w>704</w>
+      <h>296</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.pizza4me.kundenverwaltung.boundary</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>136</x>
+      <y>504</y>
+      <w>704</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.pizza4me.kundenverwaltung.control</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>136</x>
+      <y>800</y>
+      <w>704</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.pizza4me.kundenverwaltung.entity</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>536</y>
+      <w>240</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Interface &gt;&gt;
+ManageOrders
+--
++selectAllOrders():List&lt;Order&gt;
++selectOrder(orderId: Long):Order
++createOrder(order: Order):Long
++modifyOrder(order: Order):Order
++deleteOrder(orderId: Long): boolean
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>672</y>
+      <w>104</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>VerwalterIn</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>632</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>416</x>
+      <y>736</y>
+      <w>184</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Service &gt;&gt;
+OrderService</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>848</y>
+      <w>256</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Interface &gt;&gt;
+AuftragKatalog
+--
++selectAllOrders():List&lt;Order&gt;
++selectOrder(orderId: Long): Order
++createOrder(order: Order): Long
++modifyOrder(order: Order): Order
++deleteOrder(orderId: Long): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>472</x>
+      <y>1176</y>
+      <w>104</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Repository &gt;&gt;
+OrderRepository
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>576</x>
+      <y>368</y>
+      <w>144</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>/customers/{customerid}
+--
+GET - show detail customer
+PUT - modify customer
+POST - unused
+DELETE - delete customer
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>328</x>
+      <y>368</y>
+      <w>136</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>/customers
+--
+GET - list all customers
+PUT - unused
+POST - new customer
+DELETE - unused
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>296</y>
+      <w>144</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>CustomerResource
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>392</x>
+      <y>296</y>
+      <w>80</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>592</x>
+      <y>296</y>
+      <w>88</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>90.0;90.0;90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>696</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>760</y>
+      <w>24</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>976</y>
+      <w>144</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Order
+--
+-id: Long
+-beschreibung: string
+-eingangsdatum: Date
+-schiffsUrl: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>512</x>
+      <y>1064</y>
+      <w>24</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>568</x>
+      <y>896</y>
+      <w>144</w>
+      <h>312</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>100.0;10.0;160.0;10.0;160.0;370.0;10.0;370.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>136</x>
+      <y>1096</y>
+      <w>704</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>de.hsos.swa.pizza4me.kundenverwaltung.gateway</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>1144</y>
+      <w>144</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>OrderEntity
+--
+-id: Long
+-beschreibung: string
+-eingangsdatum: Date
+-schiffsUrl: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>368</y>
+      <w>144</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>CustomerDTO
+--
++id: Long
++name: string
++address: AddressDTO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>512</x>
+      <y>320</y>
+      <w>24</w>
+      <h>232</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;270.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>248</y>
+      <w>144</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>AddressDTO
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>224</x>
+      <y>328</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+</diagram>
